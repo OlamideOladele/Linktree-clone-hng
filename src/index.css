@@ -1,5 +1,5 @@
 * {
-  margin: 20px;
+  margin: 20px 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
@@ -24,7 +24,6 @@ footer {
 }
 
 header {
-  /* margin: 2rem 0; */
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -41,7 +40,7 @@ header a {
 .profile {
   margin-left: 6rem;
   position: relative;
-  left:50px;
+  /* left:50px; */
 }
 
 #profile_img{
@@ -66,7 +65,6 @@ main .buttons a {
 }
 
 main .buttons a:hover {
-  /* border: 1px solid #101828; */
   background-color: #d0d5dd;
 }
 
@@ -87,20 +85,114 @@ main .buttons a:hover {
   margin: 1.5rem 0;
 }
 
+/*----------------------Contact-----------------------------*/
+.contact.container {
+  height: auto;
+}
+
+.contact_container {
+  max-width: 50vw;
+  margin: 5rem auto 0;
+}
+
+.contact_container h1,
+.contact_container p {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.contact_container h1 {
+  color: #101828;
+  font-size: 2.2rem;
+}
+
+.contact_container p {
+  color: #475467;
+}
+
+form {
+  margin: 3rem 0;
+}
+
+.names {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.first_name,
+.last_name {
+  /* position: relative;
+  right: 20px; */
+  margin-left: 0;
+}
+
+#first_name,
+#last_name {
+  width: 20rem;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.4rem;
+  color: #344054;
+}
+
+input[type='text'],
+input[type='email'] {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  border: 1.5px solid #667085;
+  margin-bottom: 1.25rem;
+}
+
+input:focus {
+  outline: none;
+  border: 1.5px solid #b2ddff;
+}
+
+#message {
+  padding-bottom: 8.25rem;
+}
+
+textarea{
+  width: 100%;
+}
+button {
+  background-color: #1570ef;
+  color: #ffff;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #1570efb8;
+}
+
+/* Footer */
 small {
   color: #667085;
 }
 
 footer {
   border-top: 1px solid #eaecf0;
-  margin: 3rem 0 0;
   padding: 1rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/*-----------------------MOBILE VERSION-----------------------    */
 @media (max-width: 767px) {
+  /*main  */
   .profile {
     margin-left: 2rem;
   }
@@ -109,6 +201,25 @@ footer {
     width: 95%;
   }
 
+  /* contact */
+  .contact_container {
+    max-width: 95vw;
+    margin: 5rem auto 0;
+  }
+
+  .names {
+    display: block;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #first_name,
+  #last_name {
+    width: 100%;
+  }
+
+  /* footer */
   footer,
   .share_icon {
     display: none;
